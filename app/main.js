@@ -1,6 +1,8 @@
 import ImageController from "./Controllers/ImageController.js"
+import TaskController from "./Controllers/TaskController.js";
 class App {
   imageController = new ImageController()
+  taskController = new TaskController()
 }
 
 
