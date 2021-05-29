@@ -1,10 +1,19 @@
 import { ProxyState } from "../AppState.js"
 import { taskService } from "../Services/TaskService.js"
 import Task from "../Models/Task.js"
-import { generateId } from "../Utils/GenerateId.js"
+
 
 function draw() {
     console.log("task draw");
+    let template = " "
+    console.log(ProxyState.tasks, "tasks")
+
+    ProxyState.tasks?.forEach(t => {
+        console.log(t)
+        template += t.taskTemplate
+    });
+
+    document.getElementById("tasks").innerHTML = template;
 
 }
 
@@ -12,8 +21,10 @@ export default class TaskController {
     constructor() {
         console.log("task controller is working");
         ProxyState.on("tasks", draw);
-        this.addTask("Random String");
+        // this.addTask("Random String");
+        // this.deleteTask(id);
         this.getTasks();
+
     }
 
     getTasks() {
@@ -22,12 +33,12 @@ export default class TaskController {
     }
 
     addTask(description) {
-        const id = generateId()
-        console.log(id, description)
-        const task = new Task(description, false, id,)
+        console.log(description);
+        const task = new Task(description, false);
         taskService.postTask(task);
-
-
     }
-
+    deleteTask(id) {
+        console.log(id, "deleteTask");
+        taskService.deleteTask(id);
+    }
 }

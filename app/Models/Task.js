@@ -1,17 +1,18 @@
 
 export default class Task {
 
-    constructor(task, completed, id) {
+    constructor(task, completed, _id) {
         this.task = task;
         this.completed = completed;
-        this.id = id;
+        this.id = _id;
+
     }
 
 
     get taskTemplate() {
         return /*html*/ ` 
         <div class = "col-3">
-        <p>${this.task}</p>
+        <p onclick = "app.taskController.deleteTask('${this.id}')">${this.task}</p>
         <input type = "checkbox"/>
         </div>
         `
