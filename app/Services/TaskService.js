@@ -47,6 +47,16 @@ class TaskService {
         }
     }
 
+    async editTask(status, id) {
+        try {
+            let res = await taskAPI.put("/" + id, { completed: status })
+            ProxyState.task = this.getTasks()
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
 
 }
 

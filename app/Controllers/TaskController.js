@@ -32,7 +32,9 @@ export default class TaskController {
 
     }
 
-    addTask(description) {
+    addTask(event) {
+        event.preventDefault()
+        let description = event.target.description.value;
         console.log(description);
         const task = new Task(description, false);
         taskService.postTask(task);
@@ -41,4 +43,15 @@ export default class TaskController {
         console.log(id, "deleteTask");
         taskService.deleteTask(id);
     }
+
+    toggleTask(id) {
+        console.log(id, "toggletaskID")
+        const task = ProxyState.tasks.find(t => {
+            console.log(t, id)
+            return t.id === id
+        })
+        console.log(task)
+        taskService.editTask(!task.completed, id)
+    }
 }
+
