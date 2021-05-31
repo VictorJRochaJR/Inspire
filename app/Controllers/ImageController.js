@@ -13,7 +13,7 @@ function draw() {
 }
 export default class ImageController {
     constructor() {
-        console.log("controller is working");
+
         ProxyState.on("Image", draw);
         this.getImage();
 

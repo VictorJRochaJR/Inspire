@@ -13,18 +13,12 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Inspire</span>
-            </a>
-        </nav>
+
     </header>
     <main>
         <div class="container-fluid">
+
             <div class="row">
-                <div id="clock" class="col-3 text-primary">
-                </div>
                 <form class="text-center" onsubmit="app.taskController.addTask(event)">
                     <div class="form-group  col-3">
                         <label for="todo" class="font-weight-bold text-danger">Tasks</label>
@@ -36,16 +30,19 @@
 
 
             </div>
-            <div class="row" id="tasks">
+            <div class="row" id="weather"></div>
+            <div id="clock" class="col-3 text-primary">
             </div>
+            <div class="row">
+
+                <div class="col-4" id="tasks">
+                </div>
+                <div class="col-4" id="quote">
+                </div>
+            </div>
+
     </main>
-    <footer class="container-fluid bg-dark text-light">
-        <div class="row text-center">
-            <div class="col">
-                <p><small>Made with love by Codeworks</small></p>
-            </div>
-        </div>
-    </footer>
+
 
     <script src="app/main.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"

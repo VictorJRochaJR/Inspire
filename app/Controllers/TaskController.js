@@ -29,7 +29,6 @@ export default class TaskController {
 
     getTasks() {
         taskService.getTasks();
-
     }
 
     addTask(event) {
