@@ -5,33 +5,45 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.card{
+  background-color: rgba(245, 245, 245, .4);
+  opacity: .4;
+}
+
 
  #quote{
   font-size : 25px;
   font-weight: bold;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
+				
+  
 }
  
 
 #tasks{
   font-size : 20px;
   font-weight: bold;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
 }
 
 
 #form{
   font-size : 30px;
   font-weight: bold;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
 }
 
 
 #weather{
   font-size : 30px;
   font-weight: bold;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
 }
 
 #clock{
   font-size : 30px;
   font-weight: bold;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
 }
 
 

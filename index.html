@@ -17,25 +17,7 @@
     </header>
     <main class="container-fluid">
 
-        <div class="row d-flex justify-content-between">
-            <div class="col-4">
-                <form class="text-center" onsubmit="app.taskController.addTask(event)">
-                    <div class="form-group">
-                        <label for="todo" class="font-weight-bold text-danger" id="form">Tasks</label>
-                        <input type="text" name="description" class="form-control" id="todo" aria-describedby="todo"
-                            placeholder="To Do">
-                        <small id="todo" class="form-text text-muted"></small>
-                    </div>
-                </form>
-            </div>
-            <div class="col-2 offset-6 d-flex justify-content-end" id="weather">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="row text-black" id="tasks">
-                </div>
-            </div>
+        <div class="col d-flex justify-content-end" id="weather">
         </div>
         <div class="row">
             <!--  REVIEW Ask about formatting    -->
@@ -50,6 +32,24 @@
         </div>
         </div>
 
+        <div class="row d-flex flex-column align-bottom">
+            <div class="col-4">
+                <form class="text-center" onsubmit="app.taskController.addTask(event)">
+                    <div class="form-group">
+                        <label for="todo" class="font-weight-bold text-danger" id="form">Tasks</label>
+                        <input type="text" name="description" class="form-control" id="todo" aria-describedby="todo"
+                            placeholder="To Do">
+                        <small id="todo" class="form-text text-muted"></small>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-12">
+                <div class="row text-black" id="tasks">
+                </div>
+            </div>
+        </div>
     </main>
 
 
