@@ -13,8 +13,10 @@ export default class Task {
     get taskTemplate() {
         return /*html*/ ` 
         <div class = "col-3">
+        <div class = "card">
         <p onclick = "app.taskController.deleteTask('${this.id}')">${this.task}</p>
         <input type = "checkbox" ${this.completed ? ' checked ' : ''} onclick = "app.taskController.toggleTask('${this.id}')"/>
+         </div>
         </div>
         `
 
