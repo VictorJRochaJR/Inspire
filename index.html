@@ -18,28 +18,29 @@
     <main>
         <div class="container-fluid">
 
-            <div class="row">
+            <div class="row d-flex justify-content-between">
                 <form class="text-center" onsubmit="app.taskController.addTask(event)">
-                    <div class="form-group  col-3">
-                        <label for="todo" class="font-weight-bold text-danger">Tasks</label>
+                    <div class="form-group">
+                        <label for="todo" class="font-weight-bold text-danger" id="form">Tasks</label>
                         <input type="text" name="description" class="form-control" id="todo" aria-describedby="todo"
                             placeholder="To Do">
                         <small id="todo" class="form-text text-muted"></small>
                     </div>
                 </form>
-
-
+                <div class="row" id="weather"></div>
             </div>
-            <div class="row" id="weather"></div>
-            <div id="clock" class="col-3 text-primary">
+            <div class="row">
+                <div class="text-white" id="tasks">
+                </div>
+            </div>
+            <div id="clock" class="col-3 text-white">
             </div>
             <div class="row">
 
-                <div class="col-4" id="tasks">
-                </div>
-                <div class="col-4" id="quote">
+                <div class="col-4 d-flex align-items-end" id="quote">
                 </div>
             </div>
+        </div>
 
     </main>
 

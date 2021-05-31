@@ -5,6 +5,36 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ #quote{
+  font-size : 25px;
+  font-weight: bold;
+}
+ 
+
+#tasks{
+  font-size : 20px;
+  font-weight: bold;
+}
+
+
+#form{
+  font-size : 30px;
+  font-weight: bold;
+}
+
+
+#weather{
+  font-size : 30px;
+  font-weight: bold;
+}
+
+#clock{
+  font-size : 30px;
+  font-weight: bold;
+}
+
+
 body{
   background-repeat:no-repeat;
   background-size: cover;
